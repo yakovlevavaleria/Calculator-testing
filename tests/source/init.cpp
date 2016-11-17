@@ -1,57 +1,51 @@
 #include <calculator.hpp>
 #include <catch.hpp>
 
-SCENARIO("calculator sumary", "[sumary]") {
-    double a = 25.0;
-    double b = 1.0;
-    int c = 3;
+SCENARIO("calculator sum", "[sum]") {
+    float a = 9.0;
+    float b = 1.0;
     
-    double rv = sumary( a, b );
+    double rv = sum( a, b );
     
-	REQUIRE( rv == 26.0 );
+	REQUIRE( rv == 10.0 );
 }
-SCENARIO("calculator differense", "[differense]") {
-    double a = 25.0;
-    double b = 1.0;
-    int c = 3;
+SCENARIO("calculator sub", "[sub]") {
+    float a = 9.0;
+    float b = 1.0;
     
-    double rv = differense( a, b );
+    double rv = sub( a, b );
     
-	REQUIRE( rv == 24.0 );
+	REQUIRE( rv == 8.0 );
 }
-SCENARIO("calculator multiplication", "[multiplication]") {
-    double a = 25.0;
-    double b = 1.0;
-    int c = 3;
+SCENARIO("calculator mult", "[mult]") {
+    float a = 9.0;
+    float b = 1.0;
     
-    double rv = multiplication( a, b );
+    double rv = mult( a, b );
     
-	REQUIRE( rv == 25.0 );
+	REQUIRE( rv == 9.0 );
 }
-SCENARIO("calculator quotient", "[quotient]") {
-    double a = 25.0;
-    double b = 1.0;
-    int c = 3;	
+SCENARIO("calculator div", "[div]") {
+    float a = 9.0;
+    float b = 1.0;
     
-    double rv = quotient( a, b );
+    double rv = div( a, b );
     
-	REQUIRE( rv == 25.0 );
+	REQUIRE( rv == 9.0 );
 }
-SCENARIO("calculator power", "[power]") {
-    double a = 25.0;
-    double b = 1.0;
-    int c = 3;
-	
-    double rv = power( a, c );
+SCENARIO("calculator pow", "[pow]") {
+    float a = 9.0;
+    float b = 1.0;
     
-	REQUIRE( rv == 15625.0 );
+    double rv = pow( a );
+    
+	REQUIRE( rv == 6561.0 );
 }
-SCENARIO("calculator squareroot", "[squareroot]") {
-    double a = 25.0;
-    double b = 1.0;
-    int c = 3;	
+SCENARIO("calculator sq", "[sq]") {
+    float a = 9.0;
+    float b = 1.0;
     
-    double rv = squareroot( a );
-    	
-REQUIRE( rv == 5.0 );
+    double rv = sq( a );
+    
+	REQUIRE( rv == 3.0 );
 }
