@@ -1,10 +1,8 @@
-double sum(double a, double b)
-double subtraction(double a, double b)
-double multiplication(double a, double b)
-double division(double a, double b)
-double power(double a, double b)
-	double c = 1;
-	if (b>0)
-		for (int i = 0; i < b; i++)
-			c = c*a;
-
+double sumary(double a, double b);
+double differense(double a, double b);
+double multiplication(double a, double b);
+double quotient(double a, double b);
+double power(double a, int c);
+double squareroot(double a);
+double absolut(double a);
+double roundp(double a);
