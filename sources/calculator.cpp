@@ -1,39 +1,34 @@
-double sum ( float a,  float b)
-{
-	return a + b;
+double sumary(double a, double b)
+{	
+        return a + b;
 }
-double sub ( float a,  float b)
-{
-	return a - b;
+double differense(double a, double b)
+{	
+        return a - b;
 }
-double mult ( float a,  float b)
-{
-	return a * b;
+double multiplication(double a, double b)
+{	
+        return a * b;
 }
-double div ( float a,  float b)
-{
-	return (float)a / b;
+double quotient(double a, double b)
+{	
+        return a / b;
 }
-double pow ( float a )
-{
-	unsigned int extent = 4;
-	float a2 = a;
-	
-	if ( extent != 0 ) 
-	{
-			for (int i = 1; i < extent; i++)
-		{
-			a = a * a2;
-		}
-	}
-		else a = 1.0;
-	
-	return (double) a;
+double power(double a, int c)
+{	
+        double a1 = 1;	
+        if (c>0)		
+                for (int i = 0; i < c; i++)		
+                        a1 = a1*a;	
+        if (c<0)	
+                for (int i = 0; i < (-c); i++)			
+                        a1 = a1 / a;
+        return a1;
 }
-double sq ( float a )
+double squareroot(double a)
 {
-	float xn = 1.0;  
-	float xn1 = 2.0;
+	double xn = 1.0;  
+	double xn1 = 2.0;
 
 	if ( a != 1 && a != 0 )
 	{
@@ -49,4 +44,14 @@ double sq ( float a )
 
 
 	return xn1;
+}
+double absolut(double a)
+{	
+        return ((a >= 0) ? a : -a);
+}
+double roundp(double a)
+{	
+        if (a < 0)
+                a = -absolut(a);
+        return a;
 }
