@@ -29,7 +29,7 @@ long double Pow1(double x,double y)
     }
     return buff;
 }
-double *square(float x)
+double *Sqrt3(float x)
 {
 	double c = 0, res = x;
 	if (x > 0){
