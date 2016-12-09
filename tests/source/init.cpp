@@ -11,11 +11,11 @@ SCENARIO("calculator Sum", "[Sum]") {
 }
 SCENARIO("calculator Dev", "[Dev]") {
     double x = 8;
-    int y = 4;
+    int y = 0;
     
     double rv = *Dev( x, y );
     
-	REQUIRE( rv == 2);
+	REQUIRE( rv == nullptr);
 }
 SCENARIO("calculator Mult", "[Mult]") {
     double x = 3;
@@ -34,17 +34,17 @@ SCENARIO("calculator Sub", "[Sub]") {
 	REQUIRE( rv == 1);
 }
 SCENARIO("calculator Pow1", "[Pow1]") {
-    double x = 3;
-    int y = 2;
+    double x = 25;
+    int y = -2;
     
     double rv = Pow1( x, y );
     
-	REQUIRE( rv == 9 );
+	REQUIRE( rv == 5 );
 }
 SCENARIO("calculator Sqrt3", "[Sqrt3]") {
-    double x = 0.25;
+    double x = -0.25;
     
     double rv = Sqrt3( x );
     
-	REQUIRE( rv == 0.5);
+	REQUIRE( rv == nullptr);
 }
