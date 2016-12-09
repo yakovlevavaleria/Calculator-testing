@@ -29,19 +29,23 @@ long double Pow1(double x,double y)
     }
     return buff;
 }
-long double Sqrt3(double x)
+double *square(float x)
 {
-    float xn = 1.0;
-    float xn1 = 2.0;
-    if ( x != 1 && x != 0 )
-    {
-        while ( (xn1 - xn) > 0.000001 || (xn1 - xn) < -0.000001  )
-        {
-            xn = xn1;
-            xn1 = (float)(xn + (float)x/xn)/2;
-        }
-    }
-    else if ( x == 1 ) xn1 = 1;
-    else if ( x == 0 ) xn1 = 0;
-    return xn1;
+	double c = 0, res = x;
+	if (x > 0){
+		double *r = new double;
+		if (x != 1 && x != 0) {
+			while (c - res > 0.00001 || c - res < -0.00001)
+			{
+				c = res;
+				res = (c + x / res) / 2;
+			}
+			*r = res;
+		}
+		else if (x == 1) *r = 1;
+		else if (x == 0) *r = 0;
+
+		return r;
+	}
+	else return nullptr;
 }
