@@ -1,8 +1,8 @@
-long double Sum(double x,int y)
+long double Sum(double x,double y)
 {
     return x+y;
 }
-long double *Dev(double x,int y)
+long double *Dev(double x,double y)
 {
     if (y != 0) {
 		long double *buf = new long double;
@@ -11,15 +11,15 @@ long double *Dev(double x,int y)
 	}
 	else return nullptr;
  }
-long double Mult(double x,int y)
+long double Mult(double x,double y)
 {
     return x*y;
 }
-long double Sub(double x,int y)
+long double Sub(double x,double y)
 {
     return x-y;
 }
-long double Pow1(double x,int y)
+long double Pow1(double x,double y)
 {
     double buff;
     int i;
