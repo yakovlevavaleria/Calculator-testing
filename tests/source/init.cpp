@@ -3,7 +3,7 @@
 
 SCENARIO("calculator Sum", "[Sum]") {
     double x = 3;
-    int y = 4;
+    double y = 4;
     
     long double rv = Sum( x, y );
     
@@ -11,7 +11,7 @@ SCENARIO("calculator Sum", "[Sum]") {
 }
 SCENARIO("calculator Dev", "[Dev]") {
     double x = 8;
-    int y = 0;
+    double y = 0;
     
     long double rv = *Dev( x, y );
     
@@ -19,7 +19,7 @@ SCENARIO("calculator Dev", "[Dev]") {
 }
 SCENARIO("calculator Mult", "[Mult]") {
     double x = 3;
-    int y = 4;
+    double y = 4;
     
     long double rv = Mult( x, y );
     
@@ -27,7 +27,7 @@ SCENARIO("calculator Mult", "[Mult]") {
 }
 SCENARIO("calculator Sub", "[Sub]") {
     double x = 5;
-    int y = 4;
+    double y = 4;
     
     long double rv = Sub( x, y );
     
@@ -35,7 +35,7 @@ SCENARIO("calculator Sub", "[Sub]") {
 }
 SCENARIO("calculator Pow1", "[Pow1]") {
     double x = 25;
-    int y = -2;
+    double y = -2;
     
    long double rv = Pow1( x, y );
     
