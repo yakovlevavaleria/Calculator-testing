@@ -1,57 +1,47 @@
-double sumary(double a, double b)
-{	
-        return a + b;
-}
-double differense(double a, double b)
-{	
-        return a - b;
-}
-double multiplication(double a, double b)
-{	
-        return a * b;
-}
-double quotient(double a, double b)
-{	
-         return a/b;
-}
-double power(double a, int c)
-{	
-        double a1 = 1;	
-        if (c>0)		
-                for (int i = 0; i < c; i++)		
-                        a1 = a1*a;	
-        if (c<0)	
-                for (int i = 0; i < (-c); i++)			
-                        a1 = a1 / a;
-        return a1;
-}
-double squareroot(double a)
+long double Sum(double x,int y)
 {
-	double xn = 1.0;  
-	double xn1 = 2.0;
-
-	if ( a != 1 && a != 0 )
-	{
-		while ( (xn1 - xn) > 0.000001 || (xn1 - xn) < -0.000001  )
-		{
-		 xn = xn1;
-		 xn1 = (float)(xn + (float)a/xn)/2;
-		}
-
+    return x+y;
+}
+long double *Dev(double x,int y)
+{
+    if (y != 0) {
+		long double *buf = new long double;
+		*buf = x / y;
+		return buf;
 	}
-		else if ( a == 1 ) xn1 = 1;
-			else if ( a == 0 ) xn1 = 0;
-
-
-	return xn1;
+	else return nullptr;
+ }
+long double Mult(double x,int y)
+{
+    return x*y;
 }
-double absolut(double a)
-{	
-        return ((a >= 0) ? a : -a);
+long double Sub(double x,int y)
+{
+    return x-y;
 }
-double roundp(double a)
-{	
-        if (a < 0)
-                a = -absolut(a);
-        return a;
+long double Pow1(double x,int y)
+{
+    double buff;
+    int i;
+    buff = 1;
+    for (i = 1; i <= y; i++) {
+        buff *= x;
+    }
+    return buff;
+}
+long double Sqrt3(double x)
+{
+    float xn = 1.0;
+    float xn1 = 2.0;
+    if ( x != 1 && x != 0 )
+    {
+        while ( (xn1 - xn) > 0.000001 || (xn1 - xn) < -0.000001  )
+        {
+            xn = xn1;
+            xn1 = (float)(xn + (float)x/xn)/2;
+        }
+    }
+    else if ( x == 1 ) xn1 = 1;
+    else if ( x == 0 ) xn1 = 0;
+    return xn1;
 }
