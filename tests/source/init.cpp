@@ -13,7 +13,7 @@ SCENARIO("calculator Dev", "[Dev]") {
     double x = 8;
     int y = 0;
     
-    double rv = *Dev( x, y );
+    double *rv = Dev( x, y );
     
 	REQUIRE( rv == nullptr);
 }
@@ -44,7 +44,7 @@ SCENARIO("calculator Pow1", "[Pow1]") {
 SCENARIO("calculator Sqrt3", "[Sqrt3]") {
     double x = -0.25;
     
-    double rv = Sqrt3( x );
+    double *rv = Sqrt3( x );
     
 	REQUIRE( rv == nullptr);
 }
