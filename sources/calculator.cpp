@@ -12,7 +12,7 @@ double multiplication(double a, double b)
 }
 double quotient(double a, double b)
 {	
-        if (y!=0 { double *buf=new double;
+        if (y!=0) { double *buf=new double;
 		  *buf=a/b;
 		  return buf;}
 	    else return nullptr;
