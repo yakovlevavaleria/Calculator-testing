@@ -15,7 +15,7 @@ SCENARIO("calculator Dev", "[Dev]") {
     
     long double *rv = Dev( x, y );
     
-	REQUIRE( rv == std::nullptr_t);
+	REQUIRE( rv == nullptr);
 }
 SCENARIO("calculator Mult", "[Mult]") {
     double x = 3;
@@ -46,5 +46,5 @@ SCENARIO("calculator Sqrt3", "[Sqrt3]") {
     
     long double rv = *Sqrt3( x );
     
-	REQUIRE( rv == nullptr);
+	REQUIRE( rv == std::nullptr_t);
 }
