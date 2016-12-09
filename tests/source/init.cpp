@@ -13,7 +13,7 @@ SCENARIO("calculator Dev", "[Dev]") {
     double x = 8;
     int y = 0;
     
-    long double *rv = Dev( x, y );
+    long double rv = *Dev( x, y );
     
 	REQUIRE( rv == nullptr);
 }
