@@ -1,29 +1,44 @@
-#include <iostream>
+#include <iostream> 
 #include "calculator.hpp"
-
 using namespace std;
 
 int main() {
-    double a;
-    double b;
-    cin >> a;
-    cin >> b;
-    if(cin){
-    cout << "Cумма " << Sum(a, b)<< endl;
-    long double *buf = dev(a, b);
-	if (buf!=nullptr)
-		cout << "a / b = " << *buf << endl;
-	else
-		cout << "a/0 -> error" << endl;
-	delete buf;
-    cout << "Умножение " << Mult(a, b)<< endl;
-    cout << "Разность " << Sub(a, b)<< endl;
-    cout << "Степень " << Pow1(a, b)<< endl;
-    double *r = Sqrt3(a);
-	if (r) cout << "a^1/2=" << *Sqrt3(a) << endl;
-	else cout << "a < 0 -> error" << endl;
-	delete r;
-    }
-    else cout << "Неправильный ввод";
-    system("pause");
+	int a, b;
+	cout << "Enter a,b:";
+	cin >>a;
+	cin >>b;
+	cout << "Sum:" << sum(a, b) << endl;
+	cout << "Dev:" << dev(a, b) << endl;
+	cout << "Mult:" << mult(a, b) << endl;
+	try {
+		cout <<"Sub:"<<sub(a,b)<<endl;
+	}
+	catch (char *Err)
+	{
+		cout << Err << endl;
+	}
+   try {
+		cout << "Pow a to b: " << pow(a, b) << endl;
+	}
+	catch (int i)
+	{
+		cout << "Pow a to b:" << i << endl;
+	}
+	try{
+	cout << "Sqrt a: " << sqrta(a) << endl;
+	}
+	catch (char *Errr)
+	{
+		cout<<Errr<<endl;
+	}
+	try{
+	cout << "Sqrt b: " << sqrta(a) << endl;
+	}
+	catch (char *Errrr)
+	{
+		cout<<Errrr<<endl;
+	}
+
+	return 0;
+
 }
