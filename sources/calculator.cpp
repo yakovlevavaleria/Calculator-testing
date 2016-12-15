@@ -1,51 +1,72 @@
-long double Sum(double x,double y)
-{
-    return x+y;
+double sum(int a, int b) {
+	return a+b;
 }
-long double *Dev(double x,double y)
-{
-    if (y != 0) {
-		long double *buf = new long double;
-		*buf = x / y;
-		return buf;
-	}
-	else return nullptr;
- }
-long double Mult(double x,double y)
-{
-    return x*y;
-}
-long double Sub(double x,double y)
-{
-    return x-y;
-}
-long double Pow1(double x,double y)
-{
-    double buff;
-    int i;
-    buff = 1;
-    for (i = 1; i <= y; i++) {
-        buff *= x;
-    }
-    return buff;
-}
-double *Sqrt3(float x)
-{
-	double c = 0, res = x;
-	if (x > 0){
-		double *r = new double;
-		if (x != 1 && x != 0) {
-			while (c - res > 0.00001 || c - res < -0.00001)
-			{
-				c = res;
-				res = (c + x / res) / 2;
-			}
-			*r = res;
-		}
-		else if (x == 1) *r = 1;
-		else if (x == 0) *r = 0;
 
-		return r;
+double dev(int a, int b) {
+	return a-b;
+
+}
+
+double mult(int a, int b) {
+	return a*b;
+
+}
+
+double sub(int a, int b) {
+     if(b == 0)
+     {
+       throw "Error.Impossible to divide by zero";
+     }
+	return a/b;
+
+}
+
+double pow(int a, int b) {
+        if(b==0)
+	{
+	throw 1;
 	}
-	else return nullptr;
+	
+	unsigned int i = 1;
+	if(b<0){
+		double pow=1.;
+		for(i=1;i<b;++i){
+		pow/=(double)a;	
+		}
+	}
+	else{
+		double pow = a;
+	for (i = 1; i<b; i++) {
+		pow *=(double) a;
+
+	}}
+	return pow;
+}
+
+double sqrta(int a) {
+	if(a<0)
+	{
+	throw "Impossible"
+	}
+	unsigned int div = 1, rslt = 0;
+	while (a> 0)
+	{
+		a -= div, div += 2;
+		rslt += a < 0 ? 0 : 1;
+	}
+	return rslt;
+
+}
+double sqrtb(int b) {
+	if(b<0)
+	{
+	throw "Impossible"
+	}
+	unsigned int div1 = 1, rslt1 = 0;
+	while (b> 0)
+	{
+		b -= div1, div1 += 2;
+		rslt1 += b < 0 ? 0 : 1;
+	}
+	return rslt1;
 }
