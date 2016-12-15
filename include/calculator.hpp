@@ -1,6 +1,7 @@
-long double Sum(double x,double y);
-long double *Dev(double x,double y);
-long double Mult(double x,double y);
-long double Sub(double x,double y);
-long double Pow1(double x,double y);
-long double *Sqrt3(double x);
+double sum(int a, int b);
+double dev(int a, int b);
+double mult(int a, int b);
+double sub(int a, int b);
+unsigned int pow(int a, int b);
+double sqrta(int a);
+double sqrtb(int b);
