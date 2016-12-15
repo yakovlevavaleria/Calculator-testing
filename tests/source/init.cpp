@@ -46,5 +46,5 @@ SCENARIO("calculator Sqrt3", "[Sqrt3]") {
     
     long double *rv = Sqrt3( x );
     
-	REQUIRE( rv == std::nullptr_t);
+	REQUIRE( rv == (std::nullptr_t));
 }
