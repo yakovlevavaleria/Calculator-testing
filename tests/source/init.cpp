@@ -1,50 +1,93 @@
 #include <calculator.hpp>
 #include <catch.hpp>
 
-SCENARIO("calculator Sum", "[Sum]") {
-    double x = 3;
-    double y = 4;
+SCENARIO("calc sum", "[sum]") {
+    int a = 4;
+    int b = 4;
     
-    long double rv = Sum( x, y );
+    int sum1 = sum( a, b );
     
-	REQUIRE( rv == 7);
+	REQUIRE( sum1 == 8);
 }
-SCENARIO("calculator Dev", "[Dev]") {
-    double x = 8;
-    double y = 0;
+
+
+SCENARIO("calc dev", "[dev]") {
+    int a = 3;
+    int b = 4;
     
-    long double *rv = Dev( x, y );
+    int dev1 = dev( a, b );
     
-	REQUIRE( rv == nullptr);
+	REQUIRE( dev1 == -1);
 }
-SCENARIO("calculator Mult", "[Mult]") {
-    double x = 3;
-    double y = 4;
+
+SCENARIO("calc mult", "[mult]") {
+    int a = 3;
+    int b = 4;
     
-    long double rv = Mult( x, y );
+    int mult1 = mult( a, b );
     
-	REQUIRE( rv == 12);
+	REQUIRE( mult1 == 12);
 }
-SCENARIO("calculator Sub", "[Sub]") {
-    double x = 5;
-    double y = 4;
+
+SCENARIO("calc sub", "[sub]") {
+    int a = 3;
+    int b = 4;
     
-    long double rv = Sub( x, y );
+    double sub1 = sub( a, b );
     
-	REQUIRE( rv == 1);
+	REQUIRE( sub1 == 0.75);
 }
-SCENARIO("calculator Pow1", "[Pow1]") {
-    double x = 25;
-    double y = -2;
+
+SCENARIO("calc pow", "[pow]") {
+    int a = 3;
+    int b = 4;
     
-   long double rv = Pow1( x, y );
+    double pow1 = pow( a, b );
     
-	REQUIRE( rv == 5 );
+	REQUIRE( pow1 == 81.);
 }
-SCENARIO("calculator Sqrt3", "[Sqrt3]") {
-    double x = -9;
+SCENARIO("calc power", "[pow]") {
+    int a = 3;
+    int b = -2;
     
-    long double *rv = Sqrt3( x );
+     double power1 = pow( a, b );
     
-	REQUIRE( rv == (std::nullptr_t));
+	REQUIRE( pow1 == 0.111111);
+}
+
+SCENARIO("calc sqrta", "[sqrta]") {
+    int a = 4;
+   
+    int sqrta1 = sqrta(a);
+    
+	REQUIRE( sqrta1 == 2);
+}
+SCENARIO("calc sqrtaa", "[sqrta]") {
+    int a = -4;
+   
+    int sqrtaa1 = sqrta(a);
+    
+	REQUIRE( sqrtaa1 == "Impossible");
+}
+SCENARIO("calc sqrtbb", "[sqrtb]") {
+    int b = -4;
+   
+    int sqrtbb1 = sqrta(b);
+    
+	REQUIRE( sqrtbb1 == "Impossible");
+}
+SCENARIO("calc sqrtb", "[sqrtb]") {
+    int b = 9;
+    
+    int sqrtb1 = sqrtb( b );
+    
+	REQUIRE( sqrtb1 == 3);
+}
+SCENARIO("calc sub0", "[sub0]") {
+    int a = 3;
+    int b = 0;
+    
+    double sub0 = sub0( a, b );
+    
+	REQUIRE( sub0 == "Error.Impossible to divide by zero");
 }
