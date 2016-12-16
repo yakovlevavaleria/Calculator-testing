@@ -1,7 +1,8 @@
-double sum(int a, int b);
-double dev(int a, int b);
-double mult(int a, int b);
-double sub(int a, int b);
-unsigned int pow(int a, int b);
-double sqrta(int a);
-double sqrtb(int b);
+double sumary(double a, double b);
+double differense(double a, double b);
+double multiplication(double a, double b);
+double *quotient(double a, double b);
+double power(double a, int c);
+double *squareroot(double a);
+double absolut(double a);
+double roundp(double a);
