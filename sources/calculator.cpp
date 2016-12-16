@@ -1,4 +1,4 @@
-ouble sumary(double a, double b)
+double sumary(double a, double b)
 {	
         return a + b;
 }
